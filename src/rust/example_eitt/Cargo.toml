@@ -1,0 +1,11 @@
+[package]
+name = "example_eitt"
+version = "0.0.1"
+authors = ["Hinrik Örn Sigurðsson"]
+
+[dependencies]
+example_tveir = { path = "../example_tveir" }
+
+[[bin]]
+name = "example_eitt"
+path = "main.rs"
