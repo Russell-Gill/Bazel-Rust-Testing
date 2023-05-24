@@ -1,0 +1,28 @@
+load(
+    "@rules_rust//rust:defs.bzl",
+    "rust_binary",
+    "rust_library",
+    "rust_test",
+)
+
+rust_library(
+    name = "example",
+    srcs = glob(["*.rs"]),
+    edition = "2021",
+    visibility = ["//visibility:public"],
+    deps = [
+       "//src/rust/example_tveir:example_tveir",
+    ]
+)
+
+rust_binary(
+    name = "bin",
+    srcs = ["main.rs"],
+    edition = "2021",
+    crate_root = "main.rs",
+    visibility = ["//visibility:public"],
+    deps = [
+        ":example",
+        "//src/rust/example_tveir:example_tveir",
+    ],
+)

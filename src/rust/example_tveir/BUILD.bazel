@@ -1,0 +1,13 @@
+load(
+    "@rules_rust//rust:defs.bzl",
+    "rust_binary",
+    "rust_library",
+    "rust_test",
+)
+
+rust_library(
+    name = "example_tveir",
+    srcs = glob(["*.rs"]),
+    edition = "2021",
+    visibility = ["//visibility:public"],
+)
