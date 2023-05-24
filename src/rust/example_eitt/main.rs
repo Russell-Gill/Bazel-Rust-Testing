@@ -1,5 +1,7 @@
 extern crate example_tveir;
 
+use example::slib::test_func;
+
 use crate::example_eitt::slib::{
     Input,
     test_func,
